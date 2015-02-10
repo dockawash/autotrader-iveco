@@ -1,0 +1,155 @@
+@import url('./mod-texte.less');
+@import url('./mod-color.less');
+
+/* =============================================================================
+	GESTION DES FONTS
+============================================================================= */
+
+// =================================
+// font-family: 'Cabin', sans-serif;
+// >> font-family: "proxima-nova";
+body {
+	.proxima-nova;
+	h1, h2, h3, h4, h5, h6 { .proxima-nova; }
+	form {
+		.proxima-nova;
+
+		input[type="text"],
+		input[type="password"],
+		input[type="email"],
+		input[type="reset"],
+		select,
+		textarea {
+			.proxima-nova;
+		}
+	}
+	button { .proxima-nova; }
+	.multi_select_text { .proxima-nova;}
+	.dropdown { .proxima-nova; }
+	.toggle.box, h3.toggle.box { .proxima-nova; }
+	.content .widget-container .widget-title,
+	.content .widget-container h3,
+	.sidebar .widget-container .widget-title,
+	.sidebar .widget-container h3,
+	.widget_calendar table caption { .proxima-nova; }
+	.widget_featured_posts { .proxima-nova; }
+	.author-name { .proxima-nova; }
+	.widget_links h3 { .proxima-nova; }
+	.comment-form  p.form-submit #submit { .proxima-nova; }
+	#TB_ajaxContent .btn-submit { .proxima-nova; }
+
+	.syntaxhighlighter .plain,
+	.syntaxhighlighter .plain a { .proxima-nova; }
+	.cusel { .proxima-nova; }
+
+	// =================================
+	// font-family:'PT Serif Caption', serif;
+	// >> font-family: "proxima-nova";
+	.featured_caption p strong { .proxima-nova; }
+	.offers_slider .slide_text h2 { .proxima-nova; }
+	.testimonials .quote-text { .proxima-nova; }
+	.text_notice { .proxima-nova; }
+	.author-description { .proxima-nova; }
+	.tp-caption.big_title { .proxima-nova; }
+
+/* =============================================================================
+	MENU TOP BARRE LOGO
+============================================================================= */
+.header_top {
+	.logo {
+		overflow: visible;
+		img {
+			max-width: auto;
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+		}
+	}
+}
+
+/* =============================================================================
+	SLIDER VIGNETTE
+============================================================================= */
+.caption-title {
+	height: 37px;
+	line-height: 37px;
+	font-size: 35px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.caption-subtitle {
+	.txt-style-n;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.caption-big { .txt-bold; }
+.caption-sub-bleu {
+	.txt-bleu;
+	.txt-style-n;
+	// .txt-bold;
+	text-shadow: initial;
+	font-size: 18px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.caption-blanc-big {
+	.txt-bold;
+	font-size: 35px;
+	background-color: #FFF;
+	width: 320px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+}
+.caption-blanc {
+	.txt-style-n;
+	background-color: #FFF;
+	width: 320px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 18px;
+}
+.tp-simpleresponsive .caption, .tp-simpleresponsive .tp-caption, .tp-caption.text_line { background: initial !important; }
+
+/* =============================================================================
+	SEARCH MIDDLE BAR CONTENT
+============================================================================= */
+.middle_row.search_row { background-color: @color-bleu; }
+.multi_select_text { background-color: #FFF; }
+.btn_default, .btn_search, .btn-submit, input.btn-submit, .comment-form .btn-submit, .widget_search input.btn-submit, .btn_send:hover, .btn_save:hover, .tf_pagination .page_prev:hover, .tf_pagination .page_next:hover {
+	.hov-bleudark;
+}
+.btn_search input {
+	width: auto;
+	background-position: 10px 11px;
+	text-indent: 30px;
+	text-shadow: initial;
+	padding: 0 10px 0 0;
+}
+.btn input, .btn span, .btn, .btn_search {
+	width: auto;
+	font-weight: normal;
+}
+.middle_row.testimonials { background-color: @color-red; }
+.testimonials .quote-text {
+	color: #FFF;
+	.txt-style-n;
+	a { .txt-bold; }
+}
+
+
+/* =============================================================================
+	FOOTER
+============================================================================= */
+.footer { background-color: #000; }
+
+
+
+/* =============================================================================
+	EDITOR STYLE
+============================================================================= */
+@import url('./editor-style.less');
+
+// body end
+}

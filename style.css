@@ -1,0 +1,14 @@
+/*
+Theme Name: Iveco Autotrader Child
+Theme URI: http://themefuse.com/demo/wp/autotrader/
+Description: Theme fils AutoTrader pour le site Le Poids Lourd - Concessionnaire IVECO
+Author: ThemeFuse
+Author URI: http://themefuse.com
+Template: autotrader-parent
+*/
+
+@import url("../autotrader-parent/style.css");
+
+@import url("../autotrader-parent/screen.css");
+
+@import url("./css/iveco.css");

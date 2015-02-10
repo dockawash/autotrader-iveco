@@ -1,0 +1,99 @@
+/* =============================================================================
+	GESTION DES COLOEURS
+============================================================================= */
+/** Variables :
+	@color-list défini les noms des couleurs, et chaque nom correspond à un ensemble de variable suffixer par -name
+	@color-{name} donne la valeur de la couleur par nom
+	@hover-{name} donne le sens du changement de couleur en cas de hover :
+		+1 ajoute #111 à la couleur et elle sera plus clair
+		-1 retire #111 à la couleur et elle sera plus sombre
+		0 ne change pas la couleur, bien pour le noir et le blanc
+**/
+@color-list: 'blanc', 'noir', 'gris', 'bleu', 'bleudark', 'red';
+
+@color-blanc: #FFFFFF;
+@color-noir: #000000;
+@color-gris: #888888;
+@color-bleu: #39B4ED;
+@color-bleudark: #3F4B56;
+@color-red: #f04d42;
+
+@hover-blanc: 0;
+@hover-noir: 0;
+@hover-gris: 1;
+@hover-bleu: 1;
+@hover-bleudark: 1;
+@hover-red: -1;
+
+/**
+ * Classes generator
+ * .txt-[name]
+ * Loop Less using @color-list as base list, calling the value of @color-[name]
+ */
+.fn-color-txt( @idx: length(@color-list) ) when ( @idx > 0 ) {
+	@name: e(extract(@color-list, @idx));
+	@col-name: 'color-@{name}';
+	@col-vals: @@col-name;
+	@value: @col-vals;
+	.txt-@{name} {
+		color: @value;
+	}
+	.fn-color-txt(@idx - 1);
+}
+// Create classes
+.fn-color-txt();
+
+/** fn: Hover color **/
+.hov-color( @hov-color, @hov-sens: -1 ) {
+	background-color: @hov-color;
+	&:hover{
+		// lighter: + #111, darker: - #111
+		background-color: (@hov-color + @hov-sens*(#111));
+		background-image: initial;
+		cursor: pointer;
+	}
+}
+
+/**
+ * Classes generator
+ * .hov-[name]
+ * Loop using 2 list sync, one for name, one for colors values
+ */
+.fn-hov-color( @idx: length(@color-list) ) when ( @idx > 0 ) {
+	@name: e(extract(@color-list, @idx));
+	@col-name: 'color-@{name}';
+	@value: @@col-name;
+	@hov-name: 'hover-@{name}';
+	@hov-sens: @@hov-name;
+	.hov-@{name} {
+		.hov-color( @value, @hov-sens );
+	}
+	.fn-hov-color(@idx - 1);
+}
+.fn-hov-color();
+
+/** fn: Bouton  */
+.bouton( @bouton-bgcolor, @bouton-hov: -1, @bouton-color: #FFF ){
+	.hov-color( @bouton-bgcolor, @bouton-hov );
+	display: inline-block; position: relative; line-height: 30px; padding: 0 10px; border: none; font-size: 12px; color: @bouton-color; text-transform: uppercase;
+	/*.icon-flechebas {
+		.fleche-bas-vert;
+		display: none; position: absolute; top: 100%; left: 0; width: 100%; height: 10px;
+	}
+	&.actif {
+		.icon-flechebas { display: block; }
+	}*/
+}
+.fn-bouton-color( @idx: length(@color-list) ) when ( @idx > 0 ) {
+	@name: e(extract(@color-list, @idx));
+	@col-name: 'color-@{name}';
+	@value: @@col-name;
+	@hov-name: 'hover-@{name}';
+	@hov-sens: @@hov-name;
+	.bouton-@{name} {
+		.bouton( @value, @hov-sens );
+	}
+	.fn-bouton-color(@idx - 1);
+}
+.fn-bouton-color();
+

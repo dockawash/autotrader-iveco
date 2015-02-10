@@ -1,0 +1,51 @@
+/* RESET */
+.txt-reset { margin: 0; padding: 0; line-height: normal; }
+
+/* =============================================================================
+	GESTION DES FONTS
+============================================================================= */
+.proxima-nova { font-family: "proxima-nova"; }
+
+/* =============================================================================
+	TAILLE DE TEXTE
+============================================================================= */
+// Generate txt-[size] classes for font-size
+.fn-txt-size( @t-max, @t-size: 8px ) when (@t-size <= @t-max) {
+	@n-size: unit(@t-size); // remmove 'px'
+	.txt-@{n-size} {
+		font-size: @t-size;
+	}
+	.fn-txt-size( @t-max, (@t-size + 1px) );
+}
+// Create classes from 8px until 80px
+.fn-txt-size( 80px );
+
+/* =============================================================================
+	OTHERS
+============================================================================= */
+.txt-style-n { font-style: normal; }
+.txt-italic { font-style: italic; }
+
+.txt-weight-n { font-weight: normal; }
+@txt-weights: 'bold', 'bolder', 'lighter';
+.fn-txt-weight( @idx: length(@txt-weights) ) when ( @idx > 0 ) {
+	@name: e(extract(@txt-weights, @idx));
+	.txt-@{name} {
+		font-weight: @name;
+	}
+	.fn-txt-weight(@idx - 1);
+}
+.fn-txt-weight();
+
+@txt-cases-n: 'upper', 'lower', 'capit';
+@txt-cases: 'uppercase', 'lowercase', 'capitalize';
+.fn-txt-case( @idx: length(@txt-cases) ) when ( @idx > 0 ) {
+	@name: e(extract(@txt-cases-n, @idx));
+	@val: e(extract(@txt-cases, @idx));
+	.txt-@{name} {
+		text-transform: @val;
+	}
+	.fn-txt-case(@idx - 1);
+}
+.fn-txt-case();
+
