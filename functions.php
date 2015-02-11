@@ -13,9 +13,10 @@ add_action('admin_head', 'typekit_js');
 // Add hook for front-end <head></head>
 add_action('wp_head', 'typekit_js');
 
-/** Add Editor Style **/
-add_editor_style( 'css/iveco.css' );
-
 /** Load textdomain for translate **/
 load_theme_textdomain( 'tfuse', get_stylesheet_directory() . '/languages' );
+
+/** Add Editor Style **/
+// add_editor_style( 'css/editor-styles.css' );
+add_editor_style( 'css/iveco.css' );
 

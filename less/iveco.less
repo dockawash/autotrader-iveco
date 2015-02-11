@@ -2,55 +2,228 @@
 @import url('./mod-color.less');
 
 /* =============================================================================
-	GESTION DES FONTS
+	CUSTOM LESS/CSS
+============================================================================= */
+// body start
+body {
+
+// Change selection colors
+::-moz-selection {
+	background: (@color-bleu);
+	color: #fff;
+	text-shadow: none
+}
+::selection {
+	background: (@color-bleu);
+	color: #fff;
+	text-shadow: none
+}
+
+/* =============================================================================
+	RESET PARENT THEME CLASSES
 ============================================================================= */
 
 // =================================
 // font-family: 'Cabin', sans-serif;
-// >> font-family: "proxima-nova";
-body {
-	.proxima-nova;
-	h1, h2, h3, h4, h5, h6 { .proxima-nova; }
-	form {
-		.proxima-nova;
+// >> font-family: "Open Sans";
+.open-sans;
+h1, h2, h3, h4, h5, h6 { .open-sans; }
+form {
+	.open-sans;
 
-		input[type="text"],
-		input[type="password"],
-		input[type="email"],
-		input[type="reset"],
-		select,
-		textarea {
-			.proxima-nova;
-		}
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="reset"],
+	select,
+	textarea {
+		.open-sans;
 	}
-	button { .proxima-nova; }
-	.multi_select_text { .proxima-nova;}
-	.dropdown { .proxima-nova; }
-	.toggle.box, h3.toggle.box { .proxima-nova; }
-	.content .widget-container .widget-title,
-	.content .widget-container h3,
-	.sidebar .widget-container .widget-title,
-	.sidebar .widget-container h3,
-	.widget_calendar table caption { .proxima-nova; }
-	.widget_featured_posts { .proxima-nova; }
-	.author-name { .proxima-nova; }
-	.widget_links h3 { .proxima-nova; }
-	.comment-form  p.form-submit #submit { .proxima-nova; }
-	#TB_ajaxContent .btn-submit { .proxima-nova; }
+}
+button { .open-sans; }
+.multi_select_text { .open-sans;}
+.dropdown { .open-sans; }
+.toggle.box, h3.toggle.box { .open-sans; }
+.content .widget-container .widget-title,
+.content .widget-container h3,
+.sidebar .widget-container .widget-title,
+.sidebar .widget-container h3,
+.widget_calendar table caption { .open-sans; }
+.widget_featured_posts { .open-sans; }
+.author-name { .open-sans; }
+.widget_links h3 { .open-sans; }
+.comment-form  p.form-submit #submit { .open-sans; }
+#TB_ajaxContent .btn-submit { .open-sans; }
 
-	.syntaxhighlighter .plain,
-	.syntaxhighlighter .plain a { .proxima-nova; }
-	.cusel { .proxima-nova; }
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a { .open-sans; }
+.cusel { .open-sans; }
 
-	// =================================
-	// font-family:'PT Serif Caption', serif;
-	// >> font-family: "proxima-nova";
-	.featured_caption p strong { .proxima-nova; }
-	.offers_slider .slide_text h2 { .proxima-nova; }
-	.testimonials .quote-text { .proxima-nova; }
-	.text_notice { .proxima-nova; }
-	.author-description { .proxima-nova; }
-	.tp-caption.big_title { .proxima-nova; }
+// =================================
+// font-family:'PT Serif Caption', serif;
+// >> font-family: "proxima-nova";
+.featured_caption p strong { .open-sans; }
+.offers_slider .slide_text h2 { .open-sans; }
+.testimonials .quote-text { .open-sans; }
+.text_notice { .open-sans; }
+.author-description { .open-sans; }
+.tp-caption.big_title { .open-sans; }
+
+a,
+// a:visited,
+.dropdown .menu-level-0.last a,
+.dropdown .menu-level-0.last:hover a,
+.dropdown li:hover a,
+.dropdown li ul li:hover a,
+.dropdown li:hover li ul li:hover a,
+.dropdown .current-menu-ancestor .current-menu-item a,
+.dropdown .current-menu-ancestor .current-menu-ancestor a,
+.dropdown .current-menu-ancestor .current-menu-ancestor .current-menu-item a,
+.dropdown .mega-nav ul li:hover ul li:hover a,
+.dropdown .mega-nav .widget_twitter .tweet_item a,
+.dropdown .mega-nav .widget_recent_entries li a:hover,
+.dropdown .mega-nav .widget_featured_posts li .post-title a:hover,
+.dropdown .mega-nav .widget_twitter .tweet_item a:hover,
+.info_line,
+.footer_address .notice,
+.testimonials .quote-text a,
+.week_offer .offer_text h3 a,
+.special_text h3 a,
+.latest_offers .link_more,
+.brand_list .link_more,
+.brand_list2 li a,
+.breadcrumbs .link_search,
+.breadcrumbs .link_back,
+.link-news-rss span,
+.sidebar .widget_archive li a,
+.widget_twitter .tweet_item a,
+.widget_calendar table a,
+.widget_recent_posts ul li .post-title,
+.widget_popular_posts ul li .post-title,
+.content .link-arrow,
+.widget_login .forget_password a,
+.post-item .post-meta .info_row,
+.entry a,
+.text_box p a,
+.tf_pagination .page-numbers:hover,
+.tf_pagination .page_current,
+.author-text .author-title,
+.link-add-comment,
+.link-reset,
+.offer_list .offer_item h2 a,
+.offer_specification li .spec_value,
+form .cusel span:hover,
+form .cusel .cuselOptHover,
+form .cusel .cuselActive,
+form .cusel .cuselActive:hover {
+	color: @color-bleu;
+}
+
+/*h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span,
+.header_title h1 span,
+.header_title strong span,
+.entry .price_col_foot a,
+.week_offer .link_more a:hover,
+.special_offers .link_more a:hover,
+.car_types_list .link_more,
+.breadcrumbs p a:hover,
+.postlist .post-item .link_more,
+.postlist .post-title h2 a:hover,
+.entry a:hover,
+.pages_jump .inputSmall:focus,
+.pages .manage_title strong,
+.offer_details .offer_price strong,
+.details_tabs .tabcontent h3,
+.details_form .label_title,
+a:hover,
+a:focus,
+.btn_white span strong,
+.week_offer .offer_price,
+.special_text h3 a:hover,
+.special_price,
+.service_item h2 a:hover,
+.service_descr h3,
+.brand_list2 li:hover a,
+.content .widget_featured_posts .post-descr a,
+.sidebar .widget-container .current-menu-item a,
+.sidebar .widget-container .current-menu-ancestor a,
+.sidebar .widget-container .current-menu-item li a:hover,
+.sidebar .widget-container .current-menu-ancestor li a:hover,
+.sidebar .widget-container .current-menu-ancestor .current-menu-item a,
+.sidebar .widget_archive li a:hover,
+.widget_featured_posts .post-title a:hover,
+.widget_calendar table a:hover,
+.widget_tag_cloud .tagcloud a,
+.post-item .post-meta a:hover,
+.entry .post-item .post-meta a:hover,
+.post-share,
+a.link-author:hover,
+.link-reply:hover,
+.offer_list .offer_item h2 a:hover,
+.offer_list .offer_price,
+.text_box p a:hover,
+.quote-author,
+.quote-author span,
+.testimonials .quote-author,
+.sidebar .quote-author,
+.sidebar .quote-author span,
+.copyright a,
+.faq_q,
+.faq_question.active,
+.brand_list .link_more:hover,
+.sidebar .widget-container li a:hover,
+.content .widget-container li a:hover,
+.widget-container.widget_nav_menu a:hover,
+.widget-container.widget_nav_menu .current-menu-item li a:hover,
+.widget-container.widget_categories a:hover,
+.widget-container.widget_categories .current-menu-item li a:hover,
+.widget-container.widget_archive a:hover,
+.widget-container.widget_links a:hover,
+.widget-container.widget_meta a:hover,
+.widget-container.widget_pages a:hover,
+.widget_calendar #today,
+.sidebar .contact-address .mail a:hover,
+.post_list li a:hover,
+.widget_recent_posts .post-meta a,
+.widget_popular_posts .post-meta a,
+.widget_recent_posts .post-meta .link-comments,
+.widget_popular_posts .post-meta .link-comments,
+.widget_recent_posts .post-meta a:hover,
+.widget_popular_posts .post-meta a:hover,
+.widget_recent_posts ul li .post-title:hover,
+.widget_popular_posts ul li .post-title:hover,
+.content .widget_recent_entries .post-meta a,
+.sidebar .widget_recent_entries .post-meta a,
+.dropdown .mega-nav .widget_featured_posts .post-author,
+.info_price,
+.featured_caption p span,
+#adv_search_open,
+.sidebar .widget_twitter .tweet_time,
+.author-name,
+.link-author,
+.widget_login .forget_password a:hover {
+	color: (@color-bleu + #111);
+}*/
+
+.dropdown li a,
+.dropdown li ul li a,
+.dropdown li:hover ul li a {
+	color: #fff;
+	text-shadow: initial;
+	font-size: 12px;
+}
+.dropdown li ul li a,
+.dropdown li ul li:hover a {
+	color: @color-bleu;
+}
+
+
+
 
 /* =============================================================================
 	MENU TOP BARRE LOGO
@@ -65,10 +238,57 @@ body {
 			margin-top: -30px;
 		}
 	}
+	.dropdown .menu-item {
+		margin-right: 17px;
+	}
+	.dropdown > .menu-item.last {
+		margin-right: 0;
+		& > a {
+			.hov-bleu;
+			padding: 4px 15px;
+			height: 25px;
+			line-height: 25px;
+			margin-top: -8px;
+
+			& > span {
+				color: #fff;
+				padding-right: 20px;
+				background-position: right center;
+				vertical-align: middle;
+				text-shadow: initial;
+				background-image: url(../images/icons/icon_location.png);
+			}
+		}
+	}
+	.dropdown .current-menu-item a, .dropdown .current-menu-ancestor a {
+		color: @color-bleu;
+	}
+}
+
+.header_thin {
+	background-size: initial;
+}
+
+.header_title {
+	background: rgba(57, 180, 237, .95);
+	line-height: 126px;
+
+	h1 {
+		.open-sans-light;
+		display: inline-block;
+		width: 100%;
+		line-height: normal;
+		padding: 0;
+		text-shadow: initial;
+		font-size: 45px;
+		color: #FFF;
+		vertical-align: middle;
+		text-transform: uppercase;
+	}
 }
 
 /* =============================================================================
-	SLIDER VIGNETTE
+	SLIDER TYPE 1 VIGNETTE
 ============================================================================= */
 .caption-title {
 	height: 37px;
@@ -113,9 +333,21 @@ body {
 .tp-simpleresponsive .caption, .tp-simpleresponsive .tp-caption, .tp-caption.text_line { background: initial !important; }
 
 /* =============================================================================
-	SEARCH MIDDLE BAR CONTENT
+	MIDDLE BAR
 ============================================================================= */
-.middle_row.search_row { background-color: @color-bleu; }
+
+// Barre Search : bleu clair
+.middle_row.search_row.search_before { background-color: @color-bleu; color: #fff; }
+// Barre Shortcodes before Content, Shortcodes After Content : bleu marine
+.middle_row.search_row { background-color: @color-marine; color: #fff; }
+// Barre Shortcodes Before Slider : grey
+.middle_row.row_gray {}
+// Barre After Content Box Gray : light grey
+.middle_row.row_light_gray {}
+// Barre testimonial : rouge
+.middle_row.testimonials { background-color: @color-red; color: #fff; }
+
+// Search form
 .multi_select_text { background-color: #FFF; }
 .btn_default, .btn_search, .btn-submit, input.btn-submit, .comment-form .btn-submit, .widget_search input.btn-submit, .btn_send:hover, .btn_save:hover, .tf_pagination .page_prev:hover, .tf_pagination .page_next:hover {
 	.hov-bleudark;
@@ -131,13 +363,11 @@ body {
 	width: auto;
 	font-weight: normal;
 }
-.middle_row.testimonials { background-color: @color-red; }
 .testimonials .quote-text {
 	color: #FFF;
 	.txt-style-n;
 	a { .txt-bold; }
 }
-
 
 /* =============================================================================
 	FOOTER
@@ -145,11 +375,25 @@ body {
 .footer { background-color: #000; }
 
 
+/* =============================================================================
+	SINGLE PAGE
+============================================================================= */
+.entry {
+	.page_title { display: none; }
+}
 
 /* =============================================================================
 	EDITOR STYLE
 ============================================================================= */
-@import url('./editor-style.less');
+@import url('./editor-styles.less');
+
+/* =============================================================================
+	MEDIA
+============================================================================= */
+@import url('./mod-media.less');
+
 
 // body end
 }
+
+

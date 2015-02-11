@@ -9,21 +9,36 @@
 		-1 retire #111 à la couleur et elle sera plus sombre
 		0 ne change pas la couleur, bien pour le noir et le blanc
 **/
-@color-list: 'blanc', 'noir', 'gris', 'bleu', 'bleudark', 'red';
+@color-list: 'blanc', 'noir', 'gris', 'bleu', 'bleudark', 'red', 'marine', 'grey';
 
 @color-blanc: #FFFFFF;
 @color-noir: #000000;
 @color-gris: #888888;
 @color-bleu: #39B4ED;
 @color-bleudark: #3F4B56;
+@color-marine: #2863AA;
 @color-red: #f04d42;
+@color-grey: #e0e4e7;
 
 @hover-blanc: 0;
 @hover-noir: 0;
 @hover-gris: 1;
 @hover-bleu: 1;
 @hover-bleudark: 1;
+@hover-marine: 1;
 @hover-red: -1;
+@hover-grey: 1;
+
+/**
+ * Une fonction pour gerer les propriétés CSS
+ */
+.fn-color-css( @prop, @color, @hover: 0 ) {
+	@name: e(@prop);
+	@{name}: @color;
+	&:hover when ( abs(@hover) > 0 ) {
+		@{name}: (@color + @hover*(#111));
+	}
+}
 
 /**
  * Classes generator
@@ -36,7 +51,7 @@
 	@col-vals: @@col-name;
 	@value: @col-vals;
 	.txt-@{name} {
-		color: @value;
+		.fn-color-css( 'color', @value );
 	}
 	.fn-color-txt(@idx - 1);
 }
@@ -45,11 +60,8 @@
 
 /** fn: Hover color **/
 .hov-color( @hov-color, @hov-sens: -1 ) {
-	background-color: @hov-color;
+	.fn-color-css( 'background-color', @hov-color, @hov-sens);
 	&:hover{
-		// lighter: + #111, darker: - #111
-		background-color: (@hov-color + @hov-sens*(#111));
-		background-image: initial;
 		cursor: pointer;
 	}
 }
@@ -71,6 +83,7 @@
 	.fn-hov-color(@idx - 1);
 }
 .fn-hov-color();
+
 
 /** fn: Bouton  */
 .bouton( @bouton-bgcolor, @bouton-hov: -1, @bouton-color: #FFF ){

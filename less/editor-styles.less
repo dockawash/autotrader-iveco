@@ -1,0 +1,40 @@
+@import (reference) url('./mod-texte.less');
+@import (reference) url('./mod-color.less');
+
+/* =============================================================================
+	RESET EDITOR CLASSES
+============================================================================= */
+&.wp-editor, .entry {
+	.open-sans;
+	font-size: 18px;
+	color: @color-bleudark;
+	h1, h2, h3, h4, h5, p { margin: 0; }
+	p {
+		line-height: 1.3em;
+		margin-bottom: .5em;
+	}
+
+	img.size-full {
+		border-bottom: 3px solid @color-bleu;
+	}
+}
+
+
+
+.iv-titre-page, h2.tfuse {
+	.open-sans-light;
+	font-weight: lighter;
+	font-size: 56px;
+	text-align: center;
+	text-transform: uppercase;
+	p { margin: 0; }
+}
+
+.iv-titre-article, h3.tfuse {
+	font-weight: bold;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+
+

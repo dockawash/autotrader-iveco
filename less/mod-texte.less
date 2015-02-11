@@ -1,9 +1,16 @@
-/* RESET */
-.txt-reset { margin: 0; padding: 0; line-height: normal; }
-
 /* =============================================================================
 	GESTION DES FONTS
 ============================================================================= */
+// Open Sans - Google Font
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,700,300,400&subset=latin,latin-ext);
+.open-sans {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.open-sans-light { font-weight: 300; }
+.open-sans-bold { font-weight: 700; }
+
+// TypeKit - Adobe
 .proxima-nova { font-family: "proxima-nova"; }
 
 /* =============================================================================
@@ -48,4 +55,17 @@
 	.fn-txt-case(@idx - 1);
 }
 .fn-txt-case();
+
+@txt-aligns: 'left', 'right', 'center', 'justify';
+.fn-txt-align( @idx: length(@txt-aligns) ) when ( @idx > 0 ) {
+	@name: e(extract(@txt-aligns, @idx));
+	.txt-@{name} {
+		text-align: @name;
+	}
+	.fn-txt-align(@idx - 1);
+}
+.fn-txt-align();
+
+/* RESET */
+.txt-reset { margin: 0; text-decoration: none; text-transform: none; line-height: normal; }
 
