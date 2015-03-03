@@ -36,5 +36,73 @@
 	text-transform: uppercase;
 }
 
+.iv-titre-sub {
+	font-weight: normal;
+	font-size: 16px;
+	text-transform: initial;
+	line-height: 1.25em;
+	padding: 0 40px 15px;
+}
 
 
+/**
+ * Nous contacter
+ */
+.box-location {
+	text-align: left;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 1px 3px 1px 0 @color-marine;
+	margin-bottom: 40px;
+	p {
+		margin: 0; padding: 0;
+	}
+	.location-title {
+		margin: 0; padding: 0;
+		font-weight: bold;
+		color: @color-marine;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	.location-name {
+		padding: 0;
+		margin: 0 0 15px;
+		font-weight: bold;
+		font-size: 18px;
+		color: @color-red;
+		font-size: 16px;
+	}
+	.location-address {
+		margin-bottom: 15px;
+		color: @color-bleudark;
+		line-height: normal;
+	}
+	.location-info {
+		margin: 0; padding: 0;
+		font-size: 18px;
+		color: @color-marine;
+		font-size: 16px;
+	}
+	.location-maps {
+		float: right;
+		width: 145px;
+		height: 145px;
+		-webkit-mask-image: -webkit-radial-gradient(circle, black 100%, white 100%);
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		.gmnoprint { display: none; }
+		.frame_box { margin: 0; }
+	}
+	.location-link {
+		float: right;
+		clear: right;
+		width: 145px;
+		margin-top: 10px;
+		text-align: center;
+		line-height: 30px;
+		color: @color-red;
+		font-size: 14px;
+		&:hover { color: @color-red; }
+	}
+}

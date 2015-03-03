@@ -6,11 +6,8 @@
 	tfuse_shortcode_content('top');
 
 	// DOC KAWASH
-	// Si "hide page title" et content à blanc on affiche pas
-	echo "title:" . tfuse_custom_title($wp_query->query_vars['page_id'], true) . "!";
-	echo "content:" . get_the_content($wp_query->query_vars['page_id']) . "!";
-	// if (tfuse_custom_title($wp_query->query_vars['page_id'], true)!='' || strlen(trim(get_the_content($wp_query->query_vars['page_id'])))>0) :
-	if (tfuse_custom_title($wp_query->query_vars['page_id'], true)!='' || get_the_content($wp_query->query_vars['page_id'])!=null) :
+	// Si "hide_title" et content vide on affiche pas le content
+	if (tfuse_page_options('page_title')!='hide_title' || get_the_content($wp_query->query_vars['page_id'])!=null) :
 ?>
 
 <div <?php tfuse_class('middle'); ?>>
