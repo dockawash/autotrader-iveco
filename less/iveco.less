@@ -26,10 +26,21 @@ body {
 // =================================
 // font-family: 'Cabin', sans-serif;
 // >> font-family: "Open Sans";
-.open-sans;
-h1, h2, h3, h4, h5, h6 { .open-sans; }
+.main-font {
+	// .open-sans;
+	.source-sans;
+}
+.main-font-light {
+	.main-font;
+	font-weight: 200;
+}
+.main-font-bold {
+	.main-font;
+	font-weight: 600;
+}
+h1, h2, h3, h4, h5, h6 { .main-font; }
 form {
-	.open-sans;
+	.main-font;
 
 	input[type="text"],
 	input[type="password"],
@@ -37,37 +48,37 @@ form {
 	input[type="reset"],
 	select,
 	textarea {
-		.open-sans;
+		.main-font;
 	}
 }
-button { .open-sans; }
-.multi_select_text { .open-sans;}
-.dropdown { .open-sans; }
-.toggle.box, h3.toggle.box { .open-sans; }
+button { .main-font; }
+.multi_select_text { .main-font;}
+.dropdown { .main-font; }
+.toggle.box, h3.toggle.box { .main-font; }
 .content .widget-container .widget-title,
 .content .widget-container h3,
 .sidebar .widget-container .widget-title,
 .sidebar .widget-container h3,
-.widget_calendar table caption { .open-sans; }
-.widget_featured_posts { .open-sans; }
-.author-name { .open-sans; }
-.widget_links h3 { .open-sans; }
-.comment-form  p.form-submit #submit { .open-sans; }
-#TB_ajaxContent .btn-submit { .open-sans; }
+.widget_calendar table caption { .main-font; }
+.widget_featured_posts { .main-font; }
+.author-name { .main-font; }
+.widget_links h3 { .main-font; }
+.comment-form  p.form-submit #submit { .main-font; }
+#TB_ajaxContent .btn-submit { .main-font; }
 
 .syntaxhighlighter .plain,
-.syntaxhighlighter .plain a { .open-sans; }
-.cusel { .open-sans; }
+.syntaxhighlighter .plain a { .main-font; }
+.cusel { .main-font; }
 
 // =================================
 // font-family:'PT Serif Caption', serif;
 // >> font-family: "proxima-nova";
-.featured_caption p strong { .open-sans; }
-.offers_slider .slide_text h2 { .open-sans; }
-.testimonials .quote-text { .open-sans; }
-.text_notice { .open-sans; }
-.author-description { .open-sans; }
-.tp-caption.big_title { .open-sans; }
+.featured_caption p strong { .main-font; }
+.offers_slider .slide_text h2 { .main-font; }
+.testimonials .quote-text { .main-font; }
+.text_notice { .main-font; }
+.author-description { .main-font; }
+.tp-caption.big_title { .main-font; }
 
 a,
 // a:visited,
@@ -133,18 +144,57 @@ form .cusel .cuselActive:hover {
 			margin-top: -30px;
 		}
 	}
-	.dropdown li a,
+	.dropdown {
+		font-weight: 600;
+	}
+	.dropdown li a {
+		color: #fff; //blanc pour les titres parent
+	}
 	.dropdown li ul li a,
 	.dropdown li:hover ul li a {
-		color: #fff;
+		color: #000; //noir pour les sous menu
 		text-shadow: initial;
 		font-size: 12px;
+	}
+	.dropdown li.parentHover {
+		background-image: none;
+	}
+	.dropdown li ul li,
+	.dropdown .parentHover ul li { //fond blanc pour les sous menus
+		background-color: rgba(255, 255, 255, 0.9);
+		background-image: none;
 	}
 	.dropdown li ul li a,
 	.dropdown li ul li:hover a {
 		color: @color-bleu;
+		background: initial;
+		padding: 8px 15px 0 15px;
 	}
-	.dropdown .menu-item {
+	.dropdown li ul li a span {
+		padding-bottom: 8px;
+		border-bottom: 1px solid #ccc;
+	}
+	.dropdown li ul li:last-child a span {
+		padding-bottom: 9px;
+		border-bottom: none;
+	}
+	.dropdown > li:after{
+		content: '';
+		width: 0;
+		height: 0;
+		border-bottom: 8px solid rgba(255, 255, 255, 0.9);
+		border-left: 12px solid transparent;
+		border-right: 12px solid transparent;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		margin-left: -12px;
+		display: none;
+	}
+	.dropdown .parentHover:after{
+		display: block;
+	}
+	.dropdown > .menu-item {
 		margin-right: 17px;
 	}
 	.dropdown > .menu-item.last {
@@ -184,7 +234,7 @@ form .cusel .cuselActive:hover {
 	line-height: 126px;
 	height: auto;
 	h1 {
-		.open-sans-light;
+		.main-font-light;
 		display: inline-block;
 		width: 100%;
 		line-height: normal;
@@ -203,7 +253,7 @@ form .cusel .cuselActive:hover {
 .caption-title {
 	height: 37px;
 	line-height: 37px;
-	font-size: 35px;
+	// font-size: 35px;
 	background-color: rgba(255, 255, 255, 0.5);
 }
 .caption-subtitle {
@@ -213,32 +263,36 @@ form .cusel .cuselActive:hover {
 	font-size: 18px;
 	background-color: rgba(255, 255, 255, 0.5);
 }
-.caption-big { .txt-bold; }
+.caption-big {
+	font-weight: 700;
+}
 .caption-sub-bleu {
 	.txt-bleu;
 	.txt-style-n;
-	// .txt-bold;
 	text-shadow: initial;
 	font-size: 18px;
 	background-color: rgba(255, 255, 255, 0.5);
 }
 .caption-blanc-big {
-	.txt-bold;
-	font-size: 35px;
+	font-weight: 700;
+	text-transform: uppercase;
+	// font-size: 35px;
 	background-color: #FFF;
-	width: 320px;
+	// width: 320px;
 	height: 37px;
 	line-height: 37px;
-	text-align: center;
+	// text-align: center;
+	padding: 0 20px;
 }
 .caption-blanc {
 	.txt-style-n;
 	background-color: #FFF;
-	width: 320px;
+	// width: 320px;
 	height: 30px;
 	line-height: 30px;
-	text-align: center;
+	// text-align: center;
 	font-size: 18px;
+	padding: 0 20px;
 }
 .tp-simpleresponsive .caption, .tp-simpleresponsive .tp-caption, .tp-caption.text_line { background: initial !important; }
 
@@ -278,7 +332,14 @@ form .cusel .cuselActive:hover {
 }
 
 // Search form
-.multi_select_text { background-color: #FFF; }
+.multi_select_text {
+	background-color: #FFF;
+	padding: 7px 25px 7px 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .btn_default, .btn_search, .btn-submit, input.btn-submit, .comment-form .btn-submit, .widget_search input.btn-submit, .btn_send:hover, .btn_save:hover, .tf_pagination .page_prev:hover, .tf_pagination .page_next:hover {
 	.hov-bleudark;
 	border: none;
@@ -397,5 +458,34 @@ form .cusel .cuselActive:hover {
 
 // body end
 }
+
+
+/* =============================================================================
+	RESPONSIVE MEDIA
+============================================================================= */
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+	.search_row .multi_select_text {
+		width: 99px!important;
+	}
+	.search_row.search_before .row:first-child {
+		margin: 0 5px!important;
+	}
+	.search_row .rowSubmit {
+		height: 65px;
+	}
+	.contact_form .form_col_1 .row {
+		width: 150px !important;
+	}
+}
+
+@media only screen and (min-width: 280px) and (max-width: 989px) {
+	.search_row .multi_select_text {
+		width: 99px!important;
+	}
+	.search_row .rowSubmit {
+		height: 65px;
+	}
+}
+
 
 

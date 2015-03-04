@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Iveco Autotrader Child v\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-19 14:23+0200\n"
-"PO-Revision-Date: 2015-02-16 04:51:52+0000\n"
+"PO-Revision-Date: 2015-03-04 17:13:57+0000\n"
 "Last-Translator: \n"
 "Language-Team: ThemeFuse <hello@themefuse.com>\n"
 "MIME-Version: 1.0\n"
@@ -9362,7 +9362,7 @@ msgstr "Remarque:  \"Ce widget ne apparaissent que sur la page de seach pour les
 #: /var/www/wp-content/themes/autotrader-parent/before-content.php:25
 #@ tfuse
 msgid "Close Advanced Search"
-msgstr "Fermer Recherche avancée"
+msgstr "[x] Recherche avancée"
 
 #: /var/www/wp-content/themes/autotrader-parent/comments.php:73
 #, php-format

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,700,300,400&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext);
 /* =============================================================================
 	GESTION DES FONTS
 ============================================================================= */
@@ -12,8 +12,9 @@
 .open-sans-bold {
   font-weight: 700;
 }
-.proxima-nova {
-  font-family: "proxima-nova";
+.source-sans {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
 }
 /* =============================================================================
 	TAILLE DE TEXTE
@@ -631,8 +632,6 @@ body {
   /* =============================================================================
 	RESET PARENT THEME CLASSES
 ============================================================================= */
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
   /* =============================================================================
 	MENU TOP BARRE LOGO
 ============================================================================= */
@@ -677,17 +676,31 @@ body ::selection {
   color: #fff;
   text-shadow: none;
 }
+body .main-font {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+body .main-font-light {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-weight: 200;
+}
+body .main-font-bold {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-weight: 600;
+}
 body h1,
 body h2,
 body h3,
 body h4,
 body h5,
 body h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body form {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body form input[type="text"],
@@ -696,24 +709,24 @@ body form input[type="email"],
 body form input[type="reset"],
 body form select,
 body form textarea {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body button {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .multi_select_text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .dropdown {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .toggle.box,
 body h3.toggle.box {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .content .widget-container .widget-title,
@@ -721,60 +734,60 @@ body .content .widget-container h3,
 body .sidebar .widget-container .widget-title,
 body .sidebar .widget-container h3,
 body .widget_calendar table caption {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .widget_featured_posts {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .author-name {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .widget_links h3 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .comment-form p.form-submit #submit {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body #TB_ajaxContent .btn-submit {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .syntaxhighlighter .plain,
 body .syntaxhighlighter .plain a {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .cusel {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .featured_caption p strong {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .offers_slider .slide_text h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .testimonials .quote-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .text_notice {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .author-description {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body .tp-caption.big_title {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 body a,
@@ -834,18 +847,57 @@ body .header_top .logo img {
   top: 50%;
   margin-top: -30px;
 }
-body .header_top .dropdown li a,
+body .header_top .dropdown {
+  font-weight: 600;
+}
+body .header_top .dropdown li a {
+  color: #fff;
+}
 body .header_top .dropdown li ul li a,
 body .header_top .dropdown li:hover ul li a {
-  color: #fff;
+  color: #000;
   text-shadow: initial;
   font-size: 12px;
+}
+body .header_top .dropdown li.parentHover {
+  background-image: none;
+}
+body .header_top .dropdown li ul li,
+body .header_top .dropdown .parentHover ul li {
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: none;
 }
 body .header_top .dropdown li ul li a,
 body .header_top .dropdown li ul li:hover a {
   color: #39b4ed;
+  background: initial;
+  padding: 8px 15px 0 15px;
 }
-body .header_top .dropdown .menu-item {
+body .header_top .dropdown li ul li a span {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+body .header_top .dropdown li ul li:last-child a span {
+  padding-bottom: 9px;
+  border-bottom: none;
+}
+body .header_top .dropdown > li:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.9);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -12px;
+  display: none;
+}
+body .header_top .dropdown .parentHover:after {
+  display: block;
+}
+body .header_top .dropdown > .menu-item {
   margin-right: 17px;
 }
 body .header_top .dropdown > .menu-item.last {
@@ -889,7 +941,9 @@ body .header_title {
   height: auto;
 }
 body .header_title h1 {
-  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-weight: 200;
   display: inline-block;
   width: 100%;
   line-height: normal;
@@ -903,7 +957,6 @@ body .header_title h1 {
 body .caption-title {
   height: 37px;
   line-height: 37px;
-  font-size: 35px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 body .caption-subtitle {
@@ -914,7 +967,7 @@ body .caption-subtitle {
   background-color: rgba(255, 255, 255, 0.5);
 }
 body .caption-big {
-  font-weight: bold;
+  font-weight: 700;
 }
 body .caption-sub-bleu {
   color: #39b4ed;
@@ -924,22 +977,20 @@ body .caption-sub-bleu {
   background-color: rgba(255, 255, 255, 0.5);
 }
 body .caption-blanc-big {
-  font-weight: bold;
-  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: #FFF;
-  width: 320px;
   height: 37px;
   line-height: 37px;
-  text-align: center;
+  padding: 0 20px;
 }
 body .caption-blanc {
   font-style: normal;
   background-color: #FFF;
-  width: 320px;
   height: 30px;
   line-height: 30px;
-  text-align: center;
   font-size: 18px;
+  padding: 0 20px;
 }
 body .tp-simpleresponsive .caption,
 body .tp-simpleresponsive .tp-caption,
@@ -987,6 +1038,10 @@ body .middle_row.breadcrumbs a:hover {
 }
 body .multi_select_text {
   background-color: #FFF;
+  padding: 7px 25px 7px 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 body .btn_default,
 body .btn_search,
@@ -1148,7 +1203,7 @@ body .post-detail .post-aside {
 }
 body.wp-editor,
 body .entry {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #3f4b56;
@@ -1178,7 +1233,9 @@ body .entry img.size-full {
 }
 body .iv-titre-page,
 body h2.tfuse {
-  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-weight: 200;
   font-weight: lighter;
   font-size: 56px;
   text-align: center;
@@ -1281,5 +1338,30 @@ body .box-location .location-link:hover {
   }
   body .header_top .dropdown > .menu-item.last > a {
     padding: 4px 10px;
+  }
+}
+/* =============================================================================
+	RESPONSIVE MEDIA
+============================================================================= */
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+  .search_row .multi_select_text {
+    width: 99px!important;
+  }
+  .search_row.search_before .row:first-child {
+    margin: 0 5px!important;
+  }
+  .search_row .rowSubmit {
+    height: 65px;
+  }
+  .contact_form .form_col_1 .row {
+    width: 150px !important;
+  }
+}
+@media only screen and (min-width: 280px) and (max-width: 989px) {
+  .search_row .multi_select_text {
+    width: 99px!important;
+  }
+  .search_row .rowSubmit {
+    height: 65px;
   }
 }
