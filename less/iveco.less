@@ -27,15 +27,19 @@ body {
 // font-family: 'Cabin', sans-serif;
 // >> font-family: "Open Sans";
 .main-font {
-	// .open-sans;
-	.source-sans;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
 }
 .main-font-light {
-	.main-font;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+.main-font-lighter {
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
 }
 .main-font-bold {
-	.main-font;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600;
 }
 h1, h2, h3, h4, h5, h6 { .main-font; }
@@ -138,14 +142,16 @@ form .cusel .cuselActive:hover {
 	.logo {
 		overflow: visible;
 		img {
-			max-width: auto;
-			position: absolute;
-			top: 50%;
-			margin-top: -30px;
+			margin-top: -10px;
 		}
 	}
 	.dropdown {
 		font-weight: 600;
+	}
+	.dropdown li ul.submenu-1 {
+		margin-top: 20px;
+		padding: 0;
+		box-shadow: 0px 2px 2px 0px #ccc;
 	}
 	.dropdown li a {
 		color: #fff; //blanc pour les titres parent

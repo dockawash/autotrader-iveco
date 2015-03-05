@@ -7,7 +7,11 @@
 
 	// DOC KAWASH
 	// Si "hide_title" et content vide on affiche pas le content
-	if (tfuse_page_options('page_title')!='hide_title' || get_the_content($wp_query->query_vars['page_id'])!=null) :
+	// if (tfuse_page_options('page_title')!='hide_title' || !empty(get_the_content($wp_query->query_vars['page_id'])!=null) :
+	$mycont = get_page($wp_query->query_vars['page_id']);
+	$mycont = $mycont->post_content;
+	// echo $mycont;
+	if (empty($mycont)==0) :
 ?>
 
 <div <?php tfuse_class('middle'); ?>>

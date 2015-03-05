@@ -682,12 +682,14 @@ body .main-font {
 }
 body .main-font-light {
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
+}
+body .main-font-lighter {
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 200;
 }
 body .main-font-bold {
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
   font-weight: 600;
 }
 body h1,
@@ -842,13 +844,15 @@ body .header_top .logo {
   overflow: visible;
 }
 body .header_top .logo img {
-  max-width: auto;
-  position: absolute;
-  top: 50%;
-  margin-top: -30px;
+  margin-top: -10px;
 }
 body .header_top .dropdown {
   font-weight: 600;
+}
+body .header_top .dropdown li ul.submenu-1 {
+  margin-top: 20px;
+  padding: 0;
+  box-shadow: 0px 2px 2px 0px #ccc;
 }
 body .header_top .dropdown li a {
   color: #fff;
@@ -942,8 +946,7 @@ body .header_title {
 }
 body .header_title h1 {
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-weight: 200;
+  font-weight: 300;
   display: inline-block;
   width: 100%;
   line-height: normal;
@@ -1234,8 +1237,7 @@ body .entry img.size-full {
 body .iv-titre-page,
 body h2.tfuse {
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-weight: 200;
+  font-weight: 300;
   font-weight: lighter;
   font-size: 56px;
   text-align: center;
@@ -1324,6 +1326,11 @@ body .box-location .location-link {
 }
 body .box-location .location-link:hover {
   color: #f04d42;
+}
+body .img-title {
+  text-transform: uppercase;
+  font-size: .825em;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) and (max-width: 989px) {
   body .header_top .logo {
